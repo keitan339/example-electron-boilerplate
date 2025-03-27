@@ -1,40 +1,42 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "example-electron-boilerplate",
-    "workspaceFolder": "/workspace",
-    "shutdownAction": "stopCompose",
+  "name": "example-electron-boilerplate",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
 
-	"dockerComposeFile": ["./compose.yaml"],
-    "service": "ubuntu",
-    "runServices": [],
+  "dockerComposeFile": ["./compose.yaml"],
+  "service": "ubuntu",
+  "runServices": [],
 
-	"mounts": [
-        {
-            "type": "bind",
-            "source": "${localWorkspaceFolder}",
-            "target": "${containerWorkspaceFolder}"
-        }
-    ],
-
-	"features": {
-        "ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/node:1":{
-            "version": "22.14.0"
-		}
-    },
-
-    "updateRemoteUserUID": true,
-    "containerEnv": {},
-    "remoteEnv": {},
-
-    "overrideCommand": true,
-
-    "customizations": {
-        "vscode": {
-            "extensions": [],
-            "settings": {}
-        }
+  "mounts": [
+    {
+      "type": "bind",
+      "source": "${localWorkspaceFolder}",
+      "target": "${containerWorkspaceFolder}"
     }
+  ],
 
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22.14.0"
+    }
+  },
+
+  "updateRemoteUserUID": true,
+  "containerEnv": {},
+  "remoteEnv": {},
+
+  "overrideCommand": true,
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "vscode-icons-team.vscode-icons"
+      ],
+      "settings": {}
+    }
+  }
 }

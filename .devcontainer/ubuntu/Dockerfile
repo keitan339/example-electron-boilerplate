@@ -1,5 +1,8 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
 
+# デフォルトユーザの削除
+RUN userdel -r vscode
+
 # ElectronForgeでLinux向けアプリのビルドをするために必要なパッケージ
 RUN sudo apt update && sudo apt -y install rpm dpkg fakeroot
 

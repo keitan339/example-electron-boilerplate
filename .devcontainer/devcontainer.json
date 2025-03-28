@@ -17,12 +17,16 @@
     }
   ],
   "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "developer"
+    },
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22.14.0"
     }
   },
 
+  "remoteUser": "developer",
   "updateRemoteUserUID": true,
   "containerEnv": {},
   "remoteEnv": {},

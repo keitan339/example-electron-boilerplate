@@ -1,14 +1,19 @@
 import { app, BrowserWindow } from "electron";
 import path from "node:path";
 import started from "electron-squirrel-startup";
+import { registApiHandler } from "./native/native-api";
+import log from "electron-log";
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
   app.quit();
 }
 
+log.initialize();
+
 const createWindow = () => {
-  // Create the browser window.
+  registApiHandler();
+
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,

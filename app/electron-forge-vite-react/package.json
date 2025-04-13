@@ -5,7 +5,7 @@
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
   "scripts": {
-    "start": "electron-forge start -- --no-sandbox --disable-gpu",
+    "start": "electron-forge start -- --inspect-electron --no-sandbox --disable-gpu",
     "package": "electron-forge package",
     "make:win32": "electron-forge make --platform win32",
     "make:linux": "electron-forge make --platform linux",
@@ -39,6 +39,7 @@
     "vite": "5.4.15"
   },
   "dependencies": {
+    "electron-log": "5.3.3",
     "electron-squirrel-startup": "1.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0"
